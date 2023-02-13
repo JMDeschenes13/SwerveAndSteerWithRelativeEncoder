@@ -109,12 +109,7 @@ public class Drivetrain extends SubsystemBase {
 
   @Override
   public void periodic(){
-    SmartDashboard.putNumber("Encoder 0 Counts", m_frontLeft.m_turningEncoder.getDistance() );
-    SmartDashboard.putNumber("Encoder 1 Counts", m_frontRight.m_turningEncoder.getDistance() );
-    SmartDashboard.putNumber("Encoder 2 Counts", m_backLeft.m_turningEncoder.getDistance() );
-    SmartDashboard.putNumber("Encoder 3 Counts", m_backRight.m_turningEncoder.getDistance() );
-    SmartDashboard.putNumber("Gyro Heading", m_gyro.getYaw());
-
+   
   }
   /** Updates the field relative position of the robot. */
   public void updateOdometry() {
