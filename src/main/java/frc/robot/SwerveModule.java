@@ -21,10 +21,13 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class SwerveModule extends SubsystemBase{
   private int driveMotorChannel;
+  priate static final int kactualTurnEncoderResolution = 7;
+  private static final int kturnGearBoxRatio = 71;
+  private static final double kturnModuleRatio = 1.2;
   private static final double kDriveRatio = 6.67;
   private static final double kWheelRadius = 0.0508;
   private static final int kDriveEncoderResolution = 2048;
-  private static final int kTurningEncoderResolution = 414;
+  private static final double kTurningEncoderResolution = (kactualTurnEncoderResolution * kturnGearBoxRatio)/kturnModuleRatio;
   private static final double kDrivePositionToMeters = (2*Math.PI*kWheelRadius)/(kDriveRatio*kDriveEncoderResolution);
   private static final double kDriveVelocityToMetersPerSecond = (10*2*Math.PI*kWheelRadius)/(kDriveRatio*kDriveEncoderResolution);
 
