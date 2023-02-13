@@ -29,10 +29,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     driveWithJoystick(true);
-    SmartDashboard.putNumber("Encoder 0 ", m_swerve.m_frontLeft.m_turningEncoder.get() );
-    SmartDashboard.putNumber("Encoder 1 ", m_swerve.m_frontRight.m_turningEncoder.get() );
-    SmartDashboard.putNumber("Encoder 3 ", m_swerve.m_backLeft.m_turningEncoder.get() );
-    SmartDashboard.putNumber("Encoder 4 ", m_swerve.m_backRight.m_turningEncoder.get() );
+   
 
   }
 
